@@ -74,8 +74,8 @@ export default function Login() {
         </div>
       </header>
 
-      {/* ── MAIN SPLIT LAYOUT ── */}
-      <main className={styles.main}>
+      {/* ── MAIN CONTENT ── */}
+      <main className={styles.mainContent}>
 
         {/* LEFT — Vector Illustration */}
         <div className={styles.leftPanel}>
@@ -170,33 +170,35 @@ export default function Login() {
               <code>2024-0001</code> / <code>Student@1234</code>
             </div>
 
-            {/* FOOTER with support section */}
-            <footer className={styles.footer}>
-              <div className={styles.supportSection}>
-                <FiMail className={styles.supportIcon} />
-                <div className={styles.supportText}>
-                  <span className={styles.supportLabel}>Having trouble?</span>
-                  <a href="mailto:support@samsonpolytechnic.edu.ph" className={styles.supportLink}>
-                    support@samsonpolytechnic.edu.ph
-                  </a>
-                </div>
-              </div>
-
-              <div className={styles.copyrightSection}>
-                <p className={styles.copyright}>
-                  Copyright &copy; {new Date().getFullYear()} Samson Polytechnic College of Davao. All Rights Reserved.
-                </p>
-                <div className={styles.footerLinks}>
-                  <a href="#">Terms of Use</a>
-                  <span>|</span>
-                  <a href="#">Privacy Policy</a>
-                </div>
-              </div>
-            </footer>
-
           </div>
         </div>
       </main>
+
+      {/* ── FOOTER SECTION ── */}
+      <footer className={styles.footer}>
+        <div className={styles.footerContainer}>
+          <div className={styles.supportSection}>
+            <FiMail className={styles.supportIcon} />
+            <div className={styles.supportText}>
+              <span className={styles.supportLabel}>Having trouble?</span>
+              <a href="mailto:support@samsonpolytechnic.edu.ph" className={styles.supportLink}>
+                support@samsonpolytechnic.edu.ph
+              </a>
+            </div>
+          </div>
+
+          <div className={styles.copyrightSection}>
+            <p className={styles.copyright}>
+              Copyright &copy; {new Date().getFullYear()} Samson Polytechnic College of Davao. All Rights Reserved.
+            </p>
+            <div className={styles.footerLinks}>
+              <a href="#">Terms of Use</a>
+              <span>|</span>
+              <a href="#">Privacy Policy</a>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }

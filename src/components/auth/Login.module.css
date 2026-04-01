@@ -1,6 +1,6 @@
 /* ═══════════════════════════════════════════════════════════
    Login.module.css — Student Portal
-   Layout  : Header bar → Left illustration / Right form
+   Layout  : Header bar → Main content (split) → Footer
    Themes  : Light (default) + Dark (.dark modifier)
    Palette : Teal primary — matches globals.css variables
    ═══════════════════════════════════════════════════════════ */
@@ -34,8 +34,6 @@
   --login-seal-bg:     var(--teal-50);
   --login-seal-border: var(--teal-400);
   --login-seal-text:   var(--teal-700);
-  --login-help:        #778888;
-  --login-help-link:   var(--teal-700);
 
   min-height: 100vh;
   display: flex;
@@ -74,8 +72,6 @@
   --login-seal-bg:     rgba(16,160,160,0.12);
   --login-seal-border: var(--teal-600);
   --login-seal-text:   var(--teal-300);
-  --login-help:        #4a7070;
-  --login-help-link:   var(--teal-400);
 }
 
 /* ── TOP HEADER BAR ──────────────────────────────────────── */
@@ -213,8 +209,8 @@
   transition: background 0.25s ease, border-color 0.25s ease;
 }
 
-/* ── MAIN SPLIT ──────────────────────────────────────────── */
-.main {
+/* ── MAIN CONTENT (Split layout) ────────────────────────── */
+.mainContent {
   flex: 1;
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
@@ -248,7 +244,6 @@
   height: auto;
   display: block;
   object-fit: contain;
-  /* Subtle drop-shadow so it floats on both themes */
   filter: drop-shadow(0 8px 32px rgba(0,0,0,0.06));
   transition: filter 0.25s ease;
 }
@@ -491,12 +486,21 @@
   transition: background 0.25s ease, color 0.25s ease;
 }
 
-/* ── UPDATED FOOTER STYLES ───────────────────────────────── */
+/* ── FOOTER SECTION (Separate from main content) ────────── */
 .footer {
-  margin-top: 48px;
+  background: var(--login-bar-bg);
+  border-top: 1px solid var(--login-border);
+  padding: 24px 36px;
+  margin-top: auto;
+  transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+.footerContainer {
+  max-width: 1400px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 20px;
 }
 
 /* Support section */
@@ -504,8 +508,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  padding: 16px;
+  gap: 12px;
+  padding: 16px 24px;
   background: var(--login-hint-bg);
   border-radius: 12px;
   border: 1px solid var(--login-border);
@@ -513,7 +517,7 @@
 }
 
 .supportIcon {
-  font-size: 20px;
+  font-size: 22px;
   color: var(--login-link);
   flex-shrink: 0;
 }
@@ -526,14 +530,14 @@
 }
 
 .supportLabel {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
   color: var(--login-text);
   transition: color 0.25s ease;
 }
 
 .supportLink {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
   color: var(--login-link);
   text-decoration: none;
@@ -554,7 +558,7 @@
 }
 
 .copyright {
-  font-size: 12px;
+  font-size: 13px;
   color: var(--login-footer);
   margin-bottom: 12px;
   line-height: 1.5;
@@ -569,7 +573,7 @@
 }
 
 .footerLinks a {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 500;
   color: var(--login-muted);
   text-decoration: none;
@@ -582,12 +586,12 @@
 
 .footerLinks span {
   color: var(--login-border);
-  font-size: 12px;
+  font-size: 13px;
 }
 
 /* ── RESPONSIVE ──────────────────────────────────────────── */
 @media (max-width: 1024px) {
-  .main {
+  .mainContent {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -598,10 +602,14 @@
   .rightPanel {
     padding: 48px 32px 40px 32px;
   }
+  
+  .footer {
+    padding: 20px 32px;
+  }
 }
 
 @media (max-width: 820px) {
-  .main {
+  .mainContent {
     grid-template-columns: 1fr;
   }
 
@@ -618,6 +626,10 @@
   .wrapper {
     max-width: 400px;
     margin: 0 auto;
+  }
+  
+  .footer {
+    padding: 20px 24px;
   }
 }
 
@@ -652,14 +664,22 @@
   .loginBtn {
     width: 100%;
   }
-
+  
   .footer {
-    margin-top: 36px;
-    gap: 20px;
+    padding: 16px 20px;
   }
   
   .supportSection {
-    padding: 14px;
+    padding: 12px 16px;
+    gap: 10px;
+  }
+  
+  .supportIcon {
+    font-size: 18px;
+  }
+  
+  .supportLabel {
+    font-size: 12px;
   }
   
   .supportLink {
@@ -667,11 +687,11 @@
   }
   
   .copyright {
-    font-size: 10px;
+    font-size: 11px;
   }
   
   .footerLinks a {
-    font-size: 10px;
+    font-size: 11px;
   }
 }
 
@@ -690,6 +710,6 @@
   }
   
   .supportIcon {
-    font-size: 24px;
+    font-size: 22px;
   }
 }
