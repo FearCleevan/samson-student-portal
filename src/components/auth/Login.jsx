@@ -156,7 +156,7 @@ export default function Login() {
               <button type="submit" className={styles.loginBtn} disabled={isLoading}>
                 {isLoading
                   ? <><span className={styles.spinner} /> Signing in...</>
-                  : 'LOG ME IN'
+                  : 'LOGIN'
                 }
               </button>
             </form>
@@ -164,11 +164,6 @@ export default function Login() {
             <Link to="/forgot-password" className={styles.forgot}>
               Forgot password?
             </Link>
-
-            <div className={styles.demoHint}>
-              <span>Demo:</span>
-              <code>2024-0001</code> / <code>Student@1234</code>
-            </div>
 
           </div>
         </div>
@@ -178,11 +173,10 @@ export default function Login() {
       <footer className={styles.footer}>
         <div className={styles.footerContainer}>
           <div className={styles.supportSection}>
-            <FiMail className={styles.supportIcon} />
             <div className={styles.supportText}>
               <span className={styles.supportLabel}>Having trouble?</span>
               <a href="mailto:support@samsonpolytechnic.edu.ph" className={styles.supportLink}>
-                support@samsonpolytechnic.edu.ph
+                Send us a Message
               </a>
             </div>
           </div>
