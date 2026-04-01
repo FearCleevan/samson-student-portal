@@ -1,0 +1,382 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.pageHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.pageTitle {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--gray-900);
+  letter-spacing: -0.02em;
+}
+.pageSub {
+  font-size: 13px;
+  color: var(--gray-500);
+  margin-top: 4px;
+}
+
+/* PROFILE HERO */
+.profileHero {
+  background: linear-gradient(135deg, var(--teal-800) 0%, var(--teal-600) 100%);
+  border-radius: var(--border-radius-xl);
+  padding: 28px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.heroContent {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.avatarWrap {
+  position: relative;
+  flex-shrink: 0;
+}
+.bigAvatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 26px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid rgba(255, 255, 255, 0.4);
+}
+.avatarOnline {
+  position: absolute;
+  bottom: 3px;
+  right: 3px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--success);
+  border: 2.5px solid white;
+}
+/* .heroInfo {
+} */
+.heroName {
+  font-size: 20px;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 8px;
+}
+.heroBadges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+.heroBadge {
+  padding: 3px 10px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 11.5px;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.heroEmail {
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.heroActions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-end;
+}
+.editActions {
+  display: flex;
+  gap: 8px;
+}
+.editBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 16px;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--border-radius);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.editBtn:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+.saveBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 16px;
+  background: var(--success);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.saveBtn:hover {
+  background: #166534;
+}
+.cancelBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 16px;
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.8);
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--border-radius);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.cancelBtn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+.changePassBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  background: none;
+  color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--border-radius);
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.changePassBtn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+/* CHANGE PASS */
+.changePassCard {
+  background: white;
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  padding: 24px;
+}
+.sectionTitle {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.passForm {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.passField {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.passField label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--gray-600);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.passInputWrap {
+  position: relative;
+}
+.passInput {
+  width: 100%;
+  max-width: 380px;
+  padding: 10px 42px 10px 12px;
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--border-radius-sm);
+  font-size: 13.5px;
+  font-family: var(--font-sans);
+  outline: none;
+  transition: var(--transition);
+}
+.passInput:focus {
+  border-color: var(--teal-400);
+  box-shadow: 0 0 0 3px rgba(16, 160, 160, 0.1);
+}
+.eyeBtn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: var(--gray-400);
+}
+.passActions {
+  display: flex;
+  gap: 10px;
+  margin-top: 4px;
+}
+.passActions .saveBtn {
+  background: var(--teal-700);
+}
+.passActions .saveBtn:hover {
+  background: var(--teal-800);
+}
+.passActions .cancelBtn {
+  background: white;
+  color: var(--gray-600);
+  border-color: var(--border-color);
+}
+.passActions .cancelBtn:hover {
+  background: var(--gray-100);
+}
+
+/* INFO GRID */
+.infoGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.infoCard {
+  background: white;
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  padding: 20px 22px;
+}
+.cardTitle {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-color);
+}
+.infoList {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.infoRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 8px;
+  border-radius: var(--border-radius-sm);
+  transition: var(--transition);
+}
+.infoRow:hover {
+  background: var(--gray-50);
+}
+.infoIcon {
+  font-size: 15px;
+  color: var(--gray-400);
+  flex-shrink: 0;
+  width: 20px;
+  text-align: center;
+}
+.infoLabel {
+  font-size: 12px;
+  color: var(--gray-500);
+  min-width: 120px;
+  flex-shrink: 0;
+}
+.infoVal {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray-800);
+  flex: 1;
+}
+.infoInput {
+  flex: 1;
+  padding: 6px 10px;
+  border: 1.5px solid var(--teal-400);
+  border-radius: 6px;
+  font-size: 13px;
+  font-family: var(--font-sans);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(16, 160, 160, 0.08);
+}
+.activeStatus {
+  color: var(--success);
+  font-weight: 700;
+  background: var(--success-light);
+  padding: 2px 10px;
+  border-radius: 50px;
+  font-size: 12px;
+}
+.idCode {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--teal-600);
+  background: var(--teal-50);
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+.activePill {
+  padding: 3px 10px;
+  background: var(--success-light);
+  color: var(--success);
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 700;
+}
+.hiddenPass {
+  font-size: 14px;
+  color: var(--gray-400);
+  letter-spacing: 2px;
+}
+.portalNote {
+  margin-top: 14px;
+  padding: 10px 12px;
+  background: var(--gray-50);
+  border-radius: 8px;
+  font-size: 12px;
+  color: var(--gray-500);
+  line-height: 1.5;
+  border-left: 3px solid var(--teal-300);
+}
+
+@media (max-width: 900px) {
+  .infoGrid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .profileHero {
+    padding: 20px;
+  }
+  .heroContent {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .heroActions {
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,223 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.pageHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.pageTitle {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--gray-900);
+  letter-spacing: -0.02em;
+}
+.pageSub {
+  font-size: 13px;
+  color: var(--gray-500);
+  margin-top: 4px;
+}
+
+.summaryRow {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.summCard {
+  flex: 1;
+  min-width: 160px;
+  background: white;
+  border-radius: var(--border-radius-lg);
+  padding: 18px 20px;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.summIcon {
+  font-size: 26px;
+  flex-shrink: 0;
+}
+.summVal {
+  display: block;
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--gray-900);
+  line-height: 1;
+}
+.summLabel {
+  display: block;
+  font-size: 12px;
+  color: var(--gray-500);
+  margin-top: 3px;
+}
+
+.paymentList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.paymentCard {
+  background: white;
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  transition: var(--transition);
+}
+.paymentCard:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+.payLeft {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  flex: 1;
+  min-width: 0;
+}
+.payMethodIcon {
+  font-size: 28px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.payInfo {
+  flex: 1;
+  min-width: 0;
+}
+.payCat {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 5px;
+}
+.payMeta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.orNum {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--teal-600);
+  background: var(--teal-50);
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+.sep {
+  color: var(--gray-300);
+}
+.payMeta span:not(.sep):not(.methodBadge) {
+  font-size: 12.5px;
+  color: var(--gray-500);
+}
+.methodBadge {
+  padding: 2px 8px;
+  border-radius: 50px;
+  font-size: 11px;
+  font-weight: 700;
+}
+.method_gcash {
+  background: #dbeafe;
+  color: #1e40af;
+}
+.method_card {
+  background: #ede9fe;
+  color: #5b21b6;
+}
+.method_over_the_counter {
+  background: var(--success-light);
+  color: var(--success);
+}
+.payRef {
+  font-size: 11.5px;
+  color: var(--gray-400);
+  margin-top: 4px;
+  font-family: var(--font-mono);
+}
+
+.payRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  flex-shrink: 0;
+}
+.payAmount {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--success);
+}
+.statusBadge {
+  padding: 3px 10px;
+  border-radius: 50px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.status_completed {
+  background: var(--success-light);
+  color: var(--success);
+}
+.status_pending {
+  background: var(--warning-light);
+  color: var(--warning);
+}
+.printBtn {
+  width: 32px;
+  height: 32px;
+  border: 1.5px solid var(--border-color);
+  border-radius: 8px;
+  background: white;
+  color: var(--gray-500);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.printBtn:hover {
+  border-color: var(--teal-400);
+  color: var(--teal-600);
+  background: var(--teal-50);
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  gap: 12px;
+  background: white;
+  border-radius: var(--border-radius-xl);
+  border: 1px solid var(--border-color);
+  color: var(--gray-300);
+}
+.empty p {
+  font-size: 14px;
+  color: var(--gray-400);
+}
+
+@media (max-width: 600px) {
+  .paymentCard {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .payRight {
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
