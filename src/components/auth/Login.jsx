@@ -6,6 +6,7 @@ import { useStudentAuthStore } from '../../store/authStore';
 import { SCHOOL_INFO } from '../../data/mockData';
 import styles from './Login.module.css';
 import studentVector from '../../assets/College Students - Edited.png';
+import logo from '../../assets/Logo.png'; // Import the logo image
 
 export default function Login() {
   const navigate = useNavigate();
@@ -47,7 +48,7 @@ export default function Login() {
       <header className={styles.topBar}>
         <div className={styles.topBarLeft}>
           <div className={styles.schoolLogo}>
-            <div className={styles.logoIcon}>SPC</div>
+            <img src={logo} alt="SPC Logo" className={styles.logoImage} />
             <div>
               <span className={styles.schoolName}>Samson Polytechnic College of Davao</span>
               <span className={styles.schoolAddr}>Student Portal</span>
@@ -69,7 +70,7 @@ export default function Login() {
 
           <div className={styles.divisionBlock}>
             <span className={styles.divisionLabel}>Systems and Data<br />Management Division</span>
-            <div className={styles.sealSmall}>SPC</div>
+            <img src={logo} alt="SPC Logo" className={styles.sealSmallImage} />
           </div>
         </div>
       </header>
